@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+    <script src="https://use.fontawesome.com/911428dcd2.js"></script>
+    <!-- /Fonts & Icons -->
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/camera/css/camera.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- /Stylesheets -->
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <div class="header-div">
+        <div class="navbar">
+          <div class="logo-div">
+            <a href="index.html"><img src="assets/img/logo_white.png" class="logo" alt="logo"></a>
+          </div> <!-- /.logo-div -->
+          <div class="nav-div">
+            <nav>
+              <ul>
+                <a href=""><li>Home</a></li>
+                <a href=""><li>Who We Are</a></li>
+                <a href=""><li>What We Do</a></li>
+                <a href=""><li>Contact Us</a></li>
+              </ul>
+            </nav>  
+          </div>  <!-- /.nav-div -->
+        </div> <!-- /.nav-bar -->
+      </div>  <!-- /.header-div -->
+      
+      <div class="slideshow-wrapper row">
+        <div class="camera_wrap col-sm-12">
+          <div data-src="http://lorempixel.com/1280/853/city"></div>
+          <div data-src="http://lorempixel.com/1280/853/city"></div>
+          <div data-src="http://lorempixel.com/1280/853/city"></div>
+        </div>  <!-- /.camera_wrap -->
+      </div>  <!-- /.slideshow-wrapper -->
+
+      <div class="inner-wrapper">  
+        <div class="content">
+          <div class="content-columns">
+            <div class="primary-column">
+              <section class="section-block">
+                <h2 class="section-title">Recognized Leader</h2>
+                <p>Blue Heaven Technologies is a recognized leader in providing state-of-the-art air filtration testing and analytical services for air filtration and environmental emissions. <em>No other laboratory offers the range of air filtration testing services with experienced technical personnel as Blue Heaven.</em> From flat sheet efficiency tests to industrial vapor emissions testing, Blue Heaven can perform the testing services you need reliably and economically.</p>
+
+                <p>Learn more about our <a href="{{ url_for('what_we_do') }}">Testing Services</a>.</p>
+              </section>
+            </div>  <!-- /.primary-column -->
+            <div class="secondary-column">
+              <section class="section-block">
+                <h2 class="section-title">Rely on the Industry's Experts</h2>
+                <p>Blue Heaven is stafffed with trained specialists and highly experienced technicians who have spent their careers in the air filtration business. They know air filters and applications and the associated testing procedures to give you accurate results in a professional manner. The combined experience of our staff incorporates virtually every air filtration and air quality standard in use today.</p>
+
+                <p>Learn more about the <a href="{{ url_for('crew') }}">Blue Heaven Crew</a>.</p>
+              </section>
+            </div>  <!-- /.secondary-column -->
+            <div class="tertiary-column">
+              <figure>
+                <img src="http://lorempixel.com/200/200/city" alt="Blank placeholder image">
+                <figcaption>Blank Placeholder Image</figcaption>
+              </figure>
+            </div>  <!-- /.tertiary-column -->
+          </div>  <!-- /.content-columns -->
+        </div>  <!-- /.content -->
+
+      </div>  <!-- /.inner-wrapper -->
+
+      <div class="footer-div">
+        <address>
+          <span class="footer-text">Blue Heaven Technologies</span><br>
+          <a href="https://www.google.com/maps/place/2820+S+English+Station+Rd,+Louisville,+KY+40299/@38.1953751,-85.4762568,17z/data=!3m1!4b1!4m5!3m4!1s0x8869a2f9826c926b:0xb901b3f12c5da5b8!8m2!3d38.1953751!4d-85.4740681"><i class="fa fa-map-marker fa-lg fa-fw" aria-hidden="true"></i>2820 S. English Station Road, Louisville, KY 40299</a><br>
+          <a href="tel:+15023570132"><i class="fa fa-phone fa-lg fa-fw" aria-hidden="true"></i>+1 (502) 357-0132</a><br>
+          <a href="mailto:info@blueheaventech.com"><i class="fa fa-envelope-o fa-lg fa-fw" aria-hidden="true"></i>info@blueheaventech.com</a><br>
+        </address>
+      </div>  <!-- /.footer-div -->
+      
+    </div>  <!-- /.wrapper-div -->
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/camera/scripts/jquery.easing.1.3.js"></script>
+    <script src="assets/camera/scripts/jquery.mobile.customized.min.js"></script>
+    <script src="assets/camera/scripts/camera.min.js"></script>
+    <script>
+      $('.camera_wrap').camera();
+    </script>
+    <!-- /JavaScript -->
+  </body>
+</html>

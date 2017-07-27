@@ -1,0 +1,165 @@
+
+/**********************
+GENERAL
+**********************/
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
+}
+
+.inner-wrapper {
+  flex: 1;  /* Creates sticky footer by making content stretch to bottom. */
+  width: 90%;
+  margin: auto;
+}
+/**********************
+HEADER
+**********************/
+.header-div {
+  margin-bottom: 261px; /* Corrects overflow of navigation. */
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+.logo-div {
+  align-self: center;
+}
+
+.logo {
+  padding-top: 1.00em;
+  padding-bottom: 1.00em;
+}
+
+nav ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav li {
+  list-style-type: none;
+  padding-top: 0.50em;
+  padding-bottom: 0.50em; 
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;  
+}
+/**********************
+HEADER
+**********************/
+.camera-wrap {
+  width: 100%;
+}
+/**********************
+MAIN CONTENT
+**********************/
+.content-columns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section {
+  line-height: 2.00em;
+}
+
+.section-title {
+  font-family: 'Roboto Slab', serif;
+}
+
+figcaption {
+  text-align: center;
+}
+
+/**********************
+FOOTER
+**********************/
+.footer-div {
+  width: 100%;
+  margin-top: 3.00em;
+  text-align: center;
+}
+
+address {
+  padding-top: 1.20em;
+  padding-bottom: 1.20em;
+  line-height: 2.00em;
+}
+
+i {
+   margin-right: 0.25em; 
+}
+
+.footer-text {
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  font-size: 1.45em;
+}
+/**********************
+COLORS
+**********************/
+nav a,
+address,
+.footer-div a  {
+  color: #fff;
+}
+
+.navbar,
+.footer-div {
+  background-color: rgba(10,44,107,0.8);
+}
+
+/**********************
+MEDIA QUERIES
+**********************/
+@media (min-width: 780px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav li {
+    display: inline-block;
+  }
+  .logo {
+    padding: 2.00em 1.25em;
+    margin-right: 12.00em;
+  }
+  nav ul {
+    text-align: left;
+    margin-right: 1.25em;
+  }
+  nav li {
+    padding: 0.25em 0.75em;
+    border: none; 
+  }
+  .header-div {
+    margin-bottom: 131px; /* Corrects overflow of navigation. */
+  }
+  .content-columns {
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 20px;
+  }
+  .primary-column {
+    flex-basis: 2;
+  }
+  .secondary-column {
+    order: -2;
+  }
+  .tertiary-column {
+    order: -1;
+  }
+}
