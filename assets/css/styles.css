@@ -10,24 +10,26 @@ GENERAL
   font-family: 'Roboto', sans-serif;
 }
 
-.inner-wrapper {
+.content-wrapper {
   flex: 1;  /* Creates sticky footer by making content stretch to bottom. */
-  width: 90%;
+}
+
+.row-wrapper {
+  width: 100%;
+  margin: 2.500em auto;
+}
+
+.content-row {
+  width: 95%;
   margin: auto;
 }
 /**********************
 HEADER
 **********************/
-.header-div {
-  margin-bottom: 261px; /* Corrects overflow of navigation. */
-}
-
 .navbar {
   display: flex;
   flex-direction: column;
   width: 100%;
-  position: fixed;
-  z-index: 100;
 }
 
 .logo-div {
@@ -66,11 +68,12 @@ HEADER
 /**********************
 MAIN CONTENT
 **********************/
-.content-columns {
+.content-row {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 section {
   line-height: 2.00em;
 }
@@ -82,7 +85,6 @@ section {
 figcaption {
   text-align: center;
 }
-
 /**********************
 FOOTER
 **********************/
@@ -108,6 +110,35 @@ i {
   font-size: 1.45em;
 }
 /**********************
+BLUE HEAVEN CREW
+**********************/
+.showcase-wrap {
+  display: flex;
+  flex-direction: column;
+  margin: 2.50em 1.50em;
+}
+
+.photo-wrap,
+.text-wrap {
+  align-self: center;
+}
+
+.text-wrap {
+  margin-left: 1.750em;
+  margin-right: 1.750em;
+}
+
+.image-text {
+  font-family: 'Roboto, sans-serif';
+  font-size: 1.450em;
+  line-height: 1.50em;
+}
+
+.employee-name {
+  font-family: 'Roboto Slab, serif';
+  font-weight: bold;
+}
+/**********************
 COLORS
 **********************/
 nav a,
@@ -121,6 +152,11 @@ address,
   background-color: rgba(10,44,107,0.8);
 }
 
+.our-mission,
+.services {
+  background-color: #DFE4E6;
+}
+
 /**********************
 MEDIA QUERIES
 **********************/
@@ -129,6 +165,8 @@ MEDIA QUERIES
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    z-index: 100;
   }
   nav li {
     display: inline-block;
@@ -148,18 +186,45 @@ MEDIA QUERIES
   .header-div {
     margin-bottom: 131px; /* Corrects overflow of navigation. */
   }
-  .content-columns {
+  .content-row {
     flex-direction: row;
-    justify-content: center;
-    padding: 10px 20px;
+    flex: 0;
+    padding-top: 0.625em;
+    padding-bottom: 0.625em; 
   }
-  .primary-column {
-    flex-basis: 2;
+  .column {
+    padding-left: 1.250em;
+    padding-right: 1.250em;
   }
-  .secondary-column {
+  .intro .primary-column {
+    flex-grow: 2; 
     order: -2;
   }
-  .tertiary-column {
+  .intro .tertiary-column {
     order: -1;
   }
+  /**********************
+  BLUE HEAVEN CREW
+  **********************/
+  .showcase-wrap {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 3.75em 0.00em;
+    padding: 1.60em 1.60em;
+  }
+
+  .photo {
+    align-self: flex-start;
+  }
+
+  .move-right {
+    order: 5;
+  }
+  /**********************
+  COLORS
+  **********************/
+  .showcase-wrap:nth-of-type(even) {
+    background-color: #DFE4E6;
+  }
+
 }
