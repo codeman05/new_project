@@ -23,6 +23,18 @@ GENERAL
   width: 95%;
   margin: auto;
 }
+
+img {
+  border-radius: 30px;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
 /**********************
 HEADER
 **********************/
@@ -30,6 +42,7 @@ HEADER
   display: flex;
   flex-direction: column;
   width: 100%;
+  border-bottom: 5px solid #0a2c6b;
 }
 
 .logo-div {
@@ -37,6 +50,8 @@ HEADER
 }
 
 .logo {
+  height: 125px;
+  width: 250px;
   padding-top: 1.00em;
   padding-bottom: 1.00em;
 }
@@ -53,17 +68,27 @@ nav a {
 }
 
 nav li {
+  font-size: 1.4em;
   list-style-type: none;
   padding-top: 0.50em;
   padding-bottom: 0.50em; 
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;  
 }
+
+nav a:hover {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.selected {
+  color: #aaa;
+}
 /**********************
 HEADER
 **********************/
 .camera-wrap {
-  width: 100%;
+   width: 100%; 
 }
 /**********************
 MAIN CONTENT
@@ -72,6 +97,12 @@ MAIN CONTENT
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.page-title {
+  text-align: center;
+  font-family: 'Roboto Slab, serif';
+  font-size: 2.50em;
 }
 
 section {
@@ -141,15 +172,21 @@ BLUE HEAVEN CREW
 /**********************
 COLORS
 **********************/
-nav a,
-address,
-.footer-div a  {
-  color: #fff;
+nav a {
+  color: #0a2c6b;
 }
 
-.navbar,
+.navbar {
+  background-color: rgba(255,255,255,0.8);
+}
+
 .footer-div {
   background-color: rgba(10,44,107,0.8);
+}
+
+.footer-div a,
+address {
+  color: #fff;
 }
 
 .our-mission,
@@ -184,7 +221,7 @@ MEDIA QUERIES
     border: none; 
   }
   .header-div {
-    margin-bottom: 131px; /* Corrects overflow of navigation. */
+    margin-bottom: 125px; /* Corrects overflow of navigation. */
   }
   .content-row {
     flex-direction: row;
@@ -193,8 +230,8 @@ MEDIA QUERIES
     padding-bottom: 0.625em; 
   }
   .column {
-    padding-left: 1.250em;
-    padding-right: 1.250em;
+    padding-left: 1.750em;
+    padding-right: 1.750em;
   }
   .intro .primary-column {
     flex-grow: 2; 
@@ -202,6 +239,10 @@ MEDIA QUERIES
   }
   .intro .tertiary-column {
     order: -1;
+  }
+  .what-we-do .secondary-column {
+    order: -1;
+    flex-grow: 2;
   }
   /**********************
   BLUE HEAVEN CREW
@@ -224,7 +265,8 @@ MEDIA QUERIES
   COLORS
   **********************/
   .showcase-wrap:nth-of-type(even) {
-    background-color: #DFE4E6;
+    background-color: #DFE4E6; 
+    opacity: 0.7; 
   }
 
 }
