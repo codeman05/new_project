@@ -103,6 +103,7 @@ MAIN CONTENT
 
 .featured-picture {
   width: 100%;
+  max-width: 1000px;
   height: 500px;
   border-radius: 0;
   box-shadow: 0 24px 15px 10px rgba(10,44,107, 0.6);
@@ -214,7 +215,7 @@ address {
 /**********************
 MEDIA QUERIES
 **********************/
-@media (min-width: 780px) {
+@media (min-width: 1040px) {
   .navbar {
     flex-direction: row;
     justify-content: space-between;
