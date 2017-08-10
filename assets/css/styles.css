@@ -1,4 +1,3 @@
-
 /**********************
 GENERAL
 **********************/
@@ -17,10 +16,12 @@ GENERAL
 .row-wrapper {
   width: 100%;
   margin: 2.500em auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .content-row {
-  width: 95%;
+  width: 90%;
   margin: auto;
 }
 
@@ -34,6 +35,10 @@ li {
 
 a {
   text-decoration: none;
+}
+
+i {
+  padding-right: 0.55em;
 }
 /**********************
 HEADER
@@ -87,12 +92,14 @@ nav a:hover {
 /**********************
 HEADER
 **********************/
-.camera-wrap {
-   width: 100%; 
-}
+
 /**********************
 MAIN CONTENT
 **********************/
+.camera-wrap {
+   width: 100%; 
+}
+
 .content-row {
   display: flex;
   flex-direction: column;
@@ -116,6 +123,10 @@ section {
 figcaption {
   text-align: center;
 }
+
+.row-wrapper:nth-of-type(even) {
+  background-color: #DFE4E6;
+}
 /**********************
 FOOTER
 **********************/
@@ -132,7 +143,7 @@ address {
 }
 
 i {
-   margin-right: 0.25em; 
+   margin-right: 0.25em; /* Match to above */
 }
 
 .footer-text {
@@ -191,7 +202,7 @@ address {
 
 .our-mission,
 .services {
-  background-color: #DFE4E6;
+  background-color: #DFE4E6;    /* Can be deleted */
 }
 
 /**********************
@@ -225,13 +236,17 @@ MEDIA QUERIES
   }
   .content-row {
     flex-direction: row;
-    flex: 0;
+    width: 95%;
+    margin: auto;
     padding-top: 0.625em;
     padding-bottom: 0.625em; 
   }
   .column {
     padding-left: 1.750em;
     padding-right: 1.750em;
+  }
+  .primary-column {
+    
   }
   .intro .primary-column {
     flex-grow: 2; 
