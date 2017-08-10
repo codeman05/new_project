@@ -1,0 +1,103 @@
+{% extends 'partials/base.html'%}
+
+# Stylesheets
+{% block custom_stylesheets %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/camera/css/camera.css') }}">
+{% endblock %}
+
+# Page Content 
+{% block page_content %}
+  {% include 'partials/slideshow.html' %}
+   <div class="row-wrapper intro">
+    <div class="content-row">
+      <div class="column primary-column">
+        <section class="section-block">
+          <h2 class="section-title">Recognized Leader</h2>
+          <p>Blue Heaven Technologies is a recognized leader in providing state-of-the-art air filtration testing and analytical services for air filtration and environmental emissions. <em>No other laboratory offers the range of air filtration testing services with experienced technical personnel as Blue Heaven.</em> From flat sheet efficiency tests to industrial vapor emissions testing, Blue Heaven can perform the testing services you need reliably and economically.</p>
+
+          <p>Learn more about our <a href="{{ url_for('testing') }}">Testing Services</a>.</p>
+        </section>
+      </div>  <!-- /.primary-column -->
+      <div class="column secondary-column">
+        <section class="section-block">
+          <h2 class="section-title">Rely on the Industry's Experts</h2>
+          <p>We are stafffed with trained specialists and highly experienced technicians who have spent their careers in the air filtration business. They know air filters and applications and the associated testing procedures to give you accurate results in a professional manner. The combined experience of our staff incorporates virtually every air filtration and air quality standard in use today.</p>
+
+          <p>Learn more about the <a href="{{ url_for('crew') }}">Blue Heaven Crew</a>.</p>
+        </section>
+      </div>  <!-- /.secondary-column -->
+      <div class="column tertiary-column">
+        <figure>
+          <img src="{{ url_for('static', filename='assets/img/placeholder_image1.jpg') }}" alt="Placeholder Image">
+          <figcaption>Placeholder Image</figcaption>
+        </figure>
+      </div>  <!-- /.tertiary-column -->
+    </div>  <!-- /.content-row -->
+  </div>  <!-- /.row-wrapper -->
+
+  <div class="row-wrapper our-mission">
+    <div class="content-row">
+      <div class="column primary-column">
+        <section class="section-block">
+          <h2 class="section-title">Our Mission</h2>
+          <p>We believe that the only long term, true measure of a successful organization is uncompromised attention to the goals and objectives of our customers. We strive to attain that measure of success by:</p>
+          <ul>
+            <li>Giving full attention to complete, clear development and understanding of our clients' goals and objectives.</li>
+            <li>Utilizing our skills and experience to build working relationships that fulfill our clients' goals and objectives.</li>
+            <li>Maintaining a commitment to moral and ethical business principles.</li>
+          </ul>
+
+          <p>To stay on the cutting edge of air filtration technology, we maintain active involvement in various technical associations and organizations. Members of our staff serve on the technical committees to develop new filtration test standards and procedures incorporating the newest technology.</p>
+
+          <p>We continually attend seminars and workshops to update our knowlege base on the latest techniques in air filtration theory, materials and equipment. We have developed personal relationships with leading experts throughout the air filtration industry who provide us firsthand knowlege of the most current air filter testing procedures, standards, and instrumentation.</p>
+
+          <p>The bottom line for this approach to our business is to provide you with the very best in technical services on every job and every test we perform.</p>
+        </section>
+      </div>  <!-- /.primary-column -->
+      <div class="column secondary-column">
+        <figure>
+          <img src="{{ url_for('static', filename='assets/img/placeholder_image2.jpg') }}" alt="Placeholder Image">
+          <figcaption>Placeholder Image</figcaption>
+        </figure>
+      </div>  <!-- /.secondary-column -->
+    </div>  <!-- /.content-row -->
+  </div>  <!-- /.row-wrapper -->
+
+  <div class="row-wrapper what-we-do">
+    <div class="content-row">
+      <div class="column primary-column">
+        <section class="section-block">
+          <h2 class="section-title">What We Do</h2>
+          <p>Blue Heaven Technologies tests commercial and residential air filters, flat sheet air filter media, room air cleaners, vacuum cleaners, automobile cabin air filters, and industrial pulse clean systems. We can also test air filters in extreme environments such as high temperatures, high humidity and moisture.</p>
+
+          <p>Blue Heaven Technologies is also a supplier of specialized testing dusts for those customers that do their own testing.</p>
+          <h3 class="section-title">Services Offered</h3>
+          <ul>
+            <li><a href="{{ url_for('testing') }}#air-filtration"><i class="fa fa-leaf fa-lg" aria-hidden="true"></i>Air Filtration Testing</a></li>
+            <li><a href="{{ url_for('testing') }}#environmental"><i class="fa fa-leaf fa-lg" aria-hidden="true"></i>Environmental Testing</a></li>
+            <li><a href="{{ url_for('testing') }}l#emissions"><i class="fa fa-leaf fa-lg" aria-hidden="true"></i>Industrial Emissions Testing</a></li>
+            <li><a href="{{ url_for('testing') }}#play-days"><i class="fa fa-leaf fa-lg" aria-hidden="true"></i>Play Days</a></li>
+            <li><a href="{{ url_for('testing') }}#test-dusts"><i class="fa fa-leaf fa-lg" aria-hidden="true"></i>Test Dusts</a></li>
+          </ul>
+        </section>
+      </div>  <!-- /.primary-column -->
+      <div class="column secondary-column">
+        <figure>
+          <img src="{{ url_for('static', filename='assets/img/placeholder_image2.jpg') }}" alt="Placeholder Image">
+          <figcaption>Placeholder Image</figcaption>
+        </figure>
+      </div>  <!-- /.tertiary-column -->
+    </div>  <!-- /.content-row -->
+  </div>  <!-- /.row-wrapper -->
+
+{% endblock %}
+
+# Javascript
+{% block javascript %}
+  <script src="{{ url_for('static', filename='assets/camera/scripts/jquery.easing.1.3.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/camera/scripts/jquery.mobile.customized.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/camera/scripts/camera.min.js') }}"></script>
+  <script>
+    $('.camera_wrap').camera();
+  </script>
+{% endblock %}

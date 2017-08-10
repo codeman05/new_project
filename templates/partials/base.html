@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+    <script src="https://use.fontawesome.com/911428dcd2.js"></script>
+
+    <!-- General Stylesheets -->
+    {% include 'partials/styles.html' %}
+
+    <!-- Custom Stylesheets -->
+    {% block custom_stylesheets %}{% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/custom_styles.css') }}">
+    
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      {% include 'partials/header.html' %}      
+    
+      <!-- Page Content -->
+      <div class="content-wrapper">  
+        {% block page_content %}{% endblock %}
+      </div>  <!-- /.content-wrapper -->
+
+      <!-- Footer -->
+      {% include 'partials/footer.html' %}
+    </div>  <!-- /.wrapper-div -->
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% block javascript %}{% endblock %}
+  </body>
+</html>
