@@ -1,17 +1,10 @@
 <div class="header-div">
   <div class="navbar">
     <div class="logo-div">
-      <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='assets/img/logo_blue.png') }}" class="logo" alt="Blue Heaven Technologies Logo"></a>
+      {% include 'partials/logo.html' %}
     </div> <!-- /.logo-div -->
     <div class="nav-div">
-      <nav>
-        <ul>
-          <a href="{{ url_for('home') }}"><li>Home</a></li>
-          <a href="{{ url_for('testing') }}"><li>Testing Services</a></li>
-          <a href="{{ url_for('crew') }}"><li>Blue Heaven Crew</a></li>
-          <a href="{{ url_for('contact') }}"><li>Contact Us</a></li>
-        </ul>
-      </nav>  
+      {% include 'partials/navigation.html' %}  
     </div>  <!-- /.nav-div -->
   </div> <!-- /.nav-bar -->
 </div>  <!-- /.header-div -->

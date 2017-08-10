@@ -7,8 +7,9 @@
 
 # Page Content 
 {% block page_content %}
-  {% include 'partials/slideshow.html' %}
-   <div class="row-wrapper intro">
+  <img src="{{ url_for('static', filename='assets/img/group_photo-min.jpg') }}" alt="Blue Heaven Technologies Crew Members" class="featured-picture">
+
+  <div class="row-wrapper intro">
     <div class="content-row">
       <div class="column primary-column">
         <section class="section-block">
@@ -74,7 +75,6 @@
           <h3 class="section-title">Services Offered</h3>
           <ul>
             <li><a href="{{ url_for('testing') }}#air-filtration"><i class="fa fa-leaf fa-lg" aria-hidden="true"></i>Air Filtration Testing</a></li>
-            <li><a href="{{ url_for('testing') }}#environmental"><i class="fa fa-leaf fa-lg" aria-hidden="true"></i>Environmental Testing</a></li>
             <li><a href="{{ url_for('testing') }}l#emissions"><i class="fa fa-leaf fa-lg" aria-hidden="true"></i>Industrial Emissions Testing</a></li>
             <li><a href="{{ url_for('testing') }}#play-days"><i class="fa fa-leaf fa-lg" aria-hidden="true"></i>Play Days</a></li>
             <li><a href="{{ url_for('testing') }}#test-dusts"><i class="fa fa-leaf fa-lg" aria-hidden="true"></i>Test Dusts</a></li>
